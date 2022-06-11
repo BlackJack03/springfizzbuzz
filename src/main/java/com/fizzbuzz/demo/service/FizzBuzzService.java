@@ -1,6 +1,5 @@
 package com.fizzbuzz.demo.service;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fizzbuzz.demo.dao.FizzBuzzDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

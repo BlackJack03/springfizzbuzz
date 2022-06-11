@@ -1,6 +1,5 @@
 package com.fizzbuzz.demo.api;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fizzbuzz.demo.service.FizzBuzzService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
