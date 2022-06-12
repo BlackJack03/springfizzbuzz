@@ -75,4 +75,19 @@ class FizzBuzzGeneratingServiceTest {
             }
         }
     }
+
+    @Test
+    void twoConsequentRequestsWontBeInTheSameList() {
+        List<String> firstRequest = fbs.generateSequence(54);
+        List<String> secondRequest = fbs.generateSequence(411);
+
+        assertThat(secondRequest.size()).isNotEqualTo(54 + 411);
+        assertThat(secondRequest.size()).isEqualTo(411);
+    }
+
+    @Test
+    void requestWithNegativeLengthReturnsEmptyList() {
+        assertThat(fbs.generateSequence(-1).size()).isEqualTo(0);
+    }
+
 }
