@@ -7,21 +7,21 @@ import java.util.List;
 
 @Repository("FizzBuzzDAO")
 public class FizzBuzzGeneratingService implements FizzBuzzDAO {
-    private static List<String> fb = new ArrayList<>();
+    private static List<String> sequence = new ArrayList<>();
     @Override
     public List<String> generateSequence(int n) {
-        fb.clear();
+        sequence.clear();
         for (int i = 0; i < n; i++) {
             if ((i+1) % 15 == 0) {
-                fb.add("FizzBuzz");
+                sequence.add("FizzBuzz");
             } else if ((i+1) % 5 == 0) {
-                fb.add("Buzz");
+                sequence.add("Buzz");
             } else if ((i+1) % 3 == 0) {
-                fb.add("Fizz");
+                sequence.add("Fizz");
             } else {
-                fb.add(String.valueOf(i+1));
+                sequence.add(String.valueOf(i+1));
             }
         }
-        return fb;
+        return sequence;
     };
 }
